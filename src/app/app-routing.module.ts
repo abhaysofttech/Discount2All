@@ -14,7 +14,11 @@ const routes: Routes = [
   {
     path: 'list',
     loadChildren: './list/list.module#ListPageModule'
-  }
+  },
+  { path: 'categories', loadChildren: './categories/categories.module#CategoriesPageModule' },
+  { path: 'location', loadChildren: './location/location.module#LocationPageModule' },
+  { path: '**', redirectTo: 'home' },
+  { path: 'welcome', loadChildren: './welcome/welcome.module#WelcomePageModule' }
 ];
 
 @NgModule({

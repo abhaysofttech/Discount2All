@@ -1,6 +1,8 @@
 {
   "name": "discount2all",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular",
   "id": "75421bf5"
 }

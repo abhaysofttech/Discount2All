@@ -1,0 +1,37 @@
+
+.catagorySection{
+    padding: 3px;
+}
+.catagoryBlock{
+    height: 100px;
+    position: relative;
+    background: #8e8e8e;
+    background-image: url('/assets/food.jpg');
+    border-radius:5px;
+}
+.categoryTitle{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(0,0,0,0)), to(#070606));
+    color: #fff;
+    border-radius: 0 0 5px 5px;
+    padding-bottom: 5px;
+}
+.catagoryBlockChecked{
+    height: 100px;
+    position: relative;
+    background: rgba(0, 0, 0, 0.49);
+    border-radius:5px;
+
+}
+.checkedBlock{
+    position: absolute;
+    top: 30%;
+    left: 0;
+    text-align: center;
+    right: 0;
+    color: #fff;
+}

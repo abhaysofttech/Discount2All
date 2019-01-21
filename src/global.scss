@@ -9,3 +9,16 @@
 @import '~@ionic/angular/css/text-alignment.css';
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
+
+.noMargin{
+    margin: 0px !important;
+}
+.noPadding{
+    padding: 0px !important;
+}
+.toolbar-background{
+    background: #2c2345;
+  }
+  .toolbar-container{
+    color:#fff;
+  }

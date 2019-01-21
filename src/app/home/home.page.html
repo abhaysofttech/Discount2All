@@ -4,41 +4,86 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
-     Start Home
+     Home
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <ion-card class="welcome-card">
-      <ion-img src="/assets/shapes.svg"></ion-img>
-      <ion-card-header>
-        <ion-card-subtitle>Get Started</ion-card-subtitle>
-        <ion-card-title>Welcome to Ionic</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <p>Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps.</p>
-      </ion-card-content>
-    </ion-card>
-    <ion-list lines="none">
-      <ion-list-header>
-        <ion-label>Resources</ion-label>
-      </ion-list-header>
-      <ion-item href="https://beta.ionicframework.com/docs/">
-        <ion-icon slot="start" color="medium" name="book"></ion-icon>
-        <ion-label>Ionic Documentation</ion-label>
-      </ion-item>
-      <ion-item href="https://beta.ionicframework.com/docs/building/scaffolding">
-        <ion-icon slot="start" color="medium" name="build"></ion-icon>
-        <ion-label>Scaffold Out Your App</ion-label>
-      </ion-item>
-      <ion-item href="https://beta.ionicframework.com/docs/layout/structure">
-        <ion-icon slot="start" color="medium" name="grid"></ion-icon>
-        <ion-label>Change Your App Layout</ion-label>
-      </ion-item>
-      <ion-item href="https://beta.ionicframework.com/docs/theming/basics">
-        <ion-icon slot="start" color="medium" name="color-fill"></ion-icon>
-        <ion-label>Theme Your App</ion-label>
-      </ion-item>
-    </ion-list>
+  <ion-card class="welcome-card">
+    <!-- <ion-img src="/assets/shapes.svg"></ion-img> -->
+
+    <ion-card-content>
+      <div class="row">
+        <div class="col-8">
+
+          <h1>Abhay Narnaware</h1>
+        </div>
+        <div class="col-4">
+            <ion-img src="/assets/college.png" ></ion-img>
+            <ion-img src="/assets/qrcode.png" style="float: right;"></ion-img>
+
+          <!-- <div class="userQR">
+            <ion-img src="/assets/qrcode.png" style="height: 100px;width: 100px;float: right;"></ion-img>
+          </div> -->
+        </div>
+      </div>
+      <div class="row" style="background:#e8e8e8;">
+          <div class="col-12">
+            <div class="userDiscountCode">
+              <span>1234 1223 1213 1122</span>
+            </div>
+            </div>
+            </div>
+
+    </ion-card-content>
+  </ion-card>
+<ion-button (click)="getRequest()">Get Request</ion-button>
+{{requestObject}}
+<div class="thumnails">
+    <div class="list-thumbnail">
+      <!-- <div class="img-thumb" [class.selected-img]="x.selected" *ngFor="let x of images" (click)="onThumbnailClick(x)">
+        <img [src]="x.image">
+      </div> -->
+      <div class="catagoriesBlock img-thumb" *ngFor="let x of catagories">
+          <img id="dimg_3" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAMAAAArteDzAAAAdVBMVEX////GAADLIC3LHCrIAAnJCB3KESP66+zKGCfIABbJABnil5v77/DIAA7OOUDIABLRR0/99/f13d7OMDvwz9Dz2NjqtrjWYmjlp6npsLPae3zru77bgIHfiY3jnaDSTVTac3nWaWvMJzTTWV3uxMbPP0fgkJSIqpPfAAAChElEQVRYhe2U3ZqjIAyGIREELLXWPxxba7X2/i9xA9pOZ7c7ezJH+/CeKAJfAvkiY5FIJBKJRCKRSOQ7dj8vWZnyxzULKQ/fTO/SwDa6ue74mEl71xReoHf946x1VYX5muPidxZh0Lnbl4gL3/Cfz9waw/dVCHbludE8Y53NTc7PLMxza3lJ83UC6Hc5xnrkxiR2+BStuCAkgBwZmzVILUD5AMUkQOQK8qtBoxVYms+41NYg8sqLgpSS3hxHZYyCZHyKpvcsy4ZMgRnYkIM9NXeJqAo2aDBZf6UQiK65SOA1m825uXUHqRYvOo3jOLA0AXHp3EVA0n+915MEWzALxvk4EvTAAE1Hg5ZyrelZorgzt66eME+PibqEwYdUMwsL1f6L5pD4MFUCcgtB6zhwX7xeY7DOXciPtQhF0SpbkehafcT8tlYOTPqi2VlI6JqdWWOyxguRqK94lWBIIAuiu+xS0n2Abh6iBQcdtIoEbPWpeeOQ+NoOQrXrB/sXUV/VnHMFunuIps8EAV9EKW998i9OrCf1R96/FVUo275OZ+VF8Znpccs0/3S4oJWbu7agoySBP0VPR47g368q70l02hI0waGVRfVMdJZryKOjRMKl3jSQ/d6KgvQdtMekSi3kZKFidyY7176J0Dt95WgBpsO8R76whjaJ9pCDoNTfHR9QlYOjNCjhhaw9TbwrBKI+tEahef62ak7mVlIpufguVN7r+Z7y4SqI0nwQbbj4oJJKFEaFjqu4bxLqiIr6Eem2X2s/LGVg8W67Haidy+Bxt6yRz+VakOtE1Ty2lhbMdTjjqASEZhk1p5CvJv2NYvePf+9uV7z7+P2mSCQSiUQikUjkf+IXDmcl8pGWR70AAAAASUVORK5CYII="
+            class="rISBZc" height="50" width="50" alt="">
+          <span>{{x}}</span>
+        </div>
+        
+    </div>
+  </div>
+
+  <ion-card class="offer-card" *ngFor="let x of catagories">
+    <!-- <ion-img src="/assets/shapes.svg"></ion-img> -->
+    <ion-card-content>
+      <div class="row noMargin" >
+        <div class="col-6 noPadding">
+          <div class="companyLogo">
+            <img id="dimg_3" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAMAAAArteDzAAAAdVBMVEX////GAADLIC3LHCrIAAnJCB3KESP66+zKGCfIABbJABnil5v77/DIAA7OOUDIABLRR0/99/f13d7OMDvwz9Dz2NjqtrjWYmjlp6npsLPae3zru77bgIHfiY3jnaDSTVTac3nWaWvMJzTTWV3uxMbPP0fgkJSIqpPfAAAChElEQVRYhe2U3ZqjIAyGIREELLXWPxxba7X2/i9xA9pOZ7c7ezJH+/CeKAJfAvkiY5FIJBKJRCKRSOQ7dj8vWZnyxzULKQ/fTO/SwDa6ue74mEl71xReoHf946x1VYX5muPidxZh0Lnbl4gL3/Cfz9waw/dVCHbludE8Y53NTc7PLMxza3lJ83UC6Hc5xnrkxiR2+BStuCAkgBwZmzVILUD5AMUkQOQK8qtBoxVYms+41NYg8sqLgpSS3hxHZYyCZHyKpvcsy4ZMgRnYkIM9NXeJqAo2aDBZf6UQiK65SOA1m825uXUHqRYvOo3jOLA0AXHp3EVA0n+915MEWzALxvk4EvTAAE1Hg5ZyrelZorgzt66eME+PibqEwYdUMwsL1f6L5pD4MFUCcgtB6zhwX7xeY7DOXciPtQhF0SpbkehafcT8tlYOTPqi2VlI6JqdWWOyxguRqK94lWBIIAuiu+xS0n2Abh6iBQcdtIoEbPWpeeOQ+NoOQrXrB/sXUV/VnHMFunuIps8EAV9EKW998i9OrCf1R96/FVUo275OZ+VF8Znpccs0/3S4oJWbu7agoySBP0VPR47g368q70l02hI0waGVRfVMdJZryKOjRMKl3jSQ/d6KgvQdtMekSi3kZKFidyY7176J0Dt95WgBpsO8R76whjaJ9pCDoNTfHR9QlYOjNCjhhaw9TbwrBKI+tEahef62ak7mVlIpufguVN7r+Z7y4SqI0nwQbbj4oJJKFEaFjqu4bxLqiIr6Eem2X2s/LGVg8W67Haidy+Bxt6yRz+VakOtE1Ty2lhbMdTjjqASEZhk1p5CvJv2NYvePf+9uV7z7+P2mSCQSiUQikUjkf+IXDmcl8pGWR70AAAAASUVORK5CYII="
+              class="rISBZc" height="50" width="50" alt="">
+            <span>Zomato</span>
+          </div>
+
+        </div>
+        <div class="col-6 noPadding">
+
+        </div>
+      </div>
+      <div class="row noMargin" style="margin-top: 40px !important;">
+        <div class="col-12 noPadding">
+          <p>Now that your app has been created, you'll want to start building out features and components. Check out
+            some of the resources below for next steps.</p>
+
+        </div>
+        <div class="row noMargin">
+          <div class="col-3">
+
+          </div>
+          <div class="col-9"></div>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+ 
 </ion-content>
